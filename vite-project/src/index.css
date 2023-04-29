@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Courier New",Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -66,4 +66,17 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.appbar-content{
+  margin-top: 20px;
+  margin-right :3vw;
+  margin-left: 3vw;
+  
+}
+
+.terminal-text{
+  color : #39ff14;
+}
+.main-content{
+  width: 100vw;
 }
