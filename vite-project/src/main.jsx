@@ -35,7 +35,7 @@ function Main() {
         </div>
           
         
-        <div style={{border : "solid yellow 2px", width : "50vw", height : "70vh"}}>
+        <div style={{width : "50vw", height : "70vh"}}>
           <Pagecontent page={page} />
         </div>
       </div>
