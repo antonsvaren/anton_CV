@@ -34,7 +34,7 @@ export default function Topbar({ setPage }) {
             <div className="appbar-content">
               <Button sx={sxStyle} onClick={() => setPage(Page.HOME)}>
                 <Typography fontFamily={"Courier New"} variant="h6">
-                  HOME
+                  ABOUT
                 </Typography>
               </Button>
             </div>
@@ -65,6 +65,15 @@ export default function Topbar({ setPage }) {
                 <Button sx={sxStyle}>
                   <Typography fontFamily={"Courier New"} variant="h6">
                     GITHUB
+                  </Typography>
+                </Button>
+              </a>
+            </div>
+            <div className="appbar-content">
+              <a href="https://www.linkedin.com/in/anton-svar%C3%A9n-76827b142/" target="_blank">
+                <Button sx={sxStyle}>
+                  <Typography fontFamily={"Courier New"} variant="h6">
+                    Linkedin
                   </Typography>
                 </Button>
               </a>
