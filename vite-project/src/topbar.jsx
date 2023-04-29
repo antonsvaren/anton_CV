@@ -45,14 +45,6 @@ export default function Topbar({ setPage }) {
                 </Typography>
               </Button>
             </div>
-
-            <div className="appbar-content">
-              <Button sx={sxStyle} onClick={() => setPage(Page.ABOUT)}>
-                <Typography fontFamily={"Courier New"} variant="h6">
-                  ABOUT
-                </Typography>
-              </Button>
-            </div>
             <div className="appbar-content">
               <Button sx={sxStyle} onClick={() => setPage(Page.CONTACT)}>
                 <Typography fontFamily={"Courier New"} variant="h6">
