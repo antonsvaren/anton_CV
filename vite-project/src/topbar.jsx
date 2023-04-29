@@ -17,7 +17,7 @@ export default function Topbar({ setPage }) {
         position="absolute"
         elevation={0}
         style={{
-          backgroundColor: "#242424",
+          backgroundColor: "transparent",
           height: "10vh",
           // border: "solid red 2px",
         }}
