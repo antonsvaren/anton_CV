@@ -27,7 +27,7 @@ cook food and build computers.
 
 I hope you can find this site interesting,
 and if anything, you can find my contact info on
-the top right corner.
+my linkedin profile.
 
 
 Best, Anton`
@@ -45,5 +45,5 @@ Best, Anton`
     return () => clearInterval(typingInterval);
   }, []);
 
-  return <div style={{whiteSpace : "pre-wrap"}}>{text}</div>;
+  return <div style={{whiteSpace : "pre-wrap", paddingLeft : "20px"}}>{text}</div>;
 }
