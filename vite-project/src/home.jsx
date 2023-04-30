@@ -40,7 +40,7 @@ Best, Anton`
         setText((prevText) => prevText + prewrittenText[currentIndex]);
         currentIndex++;
       }
-    }, 5);
+    }, 50);
 
     return () => clearInterval(typingInterval);
   }, []);
