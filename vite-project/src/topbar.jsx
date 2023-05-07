@@ -45,13 +45,13 @@ export default function Topbar({ setPage }) {
                 </Typography>
               </Button>
             </div>
-            <div className="appbar-content">
+            {/* <div className="appbar-content">
               <Button sx={sxStyle} onClick={() => setPage(Page.CONTACT)}>
                 <Typography fontFamily={"Courier New"} variant="h6">
                   CONTACT
                 </Typography>
               </Button>
-            </div>
+            </div> */}
             <div className="appbar-content">
               <a href="https://github.com/antonsvaren" target="_blank">
                 <Button sx={sxStyle}>

@@ -12,16 +12,14 @@ export default function Pagecontent({page}) {
       break;
     case Page.PORTFOLIO:
         res = <Portfolio/>
-        console.log("Port")
         break;
     // case Page.ABOUT:
     //     console.log("About")
     //     res = <About/>
     //     break;
-    case Page.CONTACT:
-        res = <Contact/>
-        console.log("Contact")
-        break;
+    // case Page.CONTACT:
+    //     res = <Contact/>
+    //     break;
     default:
         res = <Home/>
   }
