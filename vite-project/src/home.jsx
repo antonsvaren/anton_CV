@@ -18,7 +18,7 @@ enjoyed working on this project and have gained
 valuable skills and knowledge from it.
 
 I would describe myself as a
-logical and curios person that loves to find
+logical and curious person that loves to find
 new and innovative solutions to problems.
 
 Some of my many hobbies are brewing beer,
@@ -29,7 +29,7 @@ and if anything, you can find my contact info on
 my <a href="https://www.linkedin.com/in/anton-svar%C3%A9n-76827b142/" target="_blank">LinkedIn</a>.
 
 
-Best, Anton`
+Best regards, Anton `
   var storedHome = sessionStorage.getItem("storedHome");
   useEffect(() => {
     let currentIndex = 1;
@@ -78,16 +78,16 @@ Best, Anton`
     };
   }, []);
   return <div style={{display : "flex"}}>
-    <div style={{whiteSpace : "pre-wrap", paddingLeft : "20px"}} dangerouslySetInnerHTML={{ __html: storedHome }}></div>
+    <div style={{whiteSpace : "pre-wrap", paddingLeft : "20px", color : "#f9f9f9", position : "absolute"}} dangerouslySetInnerHTML={{ __html: storedHome }}></div>
     <canvas
         ref={canvasRef}
         style={{
-          scale: "0.8",
+          scale: "1",
           position: "absolute",
           right: "0",
           paddingBottom: "100px",
           paddingLeft: "100px",
-          paddingRight: "100px",
+          paddingRight: "150px",
         }}
       />
   </div> 
