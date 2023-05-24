@@ -26,9 +26,7 @@ export default function Topbar({ setPage }) {
           <div
             style={{
               display: "flex",
-              position: "absolute",
-              top: "0",
-              right: "0",
+              marginLeft : "50%"
             }}
           >
             <div className="appbar-content">
@@ -45,13 +43,6 @@ export default function Topbar({ setPage }) {
                 </Typography>
               </Button>
             </div>
-            {/* <div className="appbar-content">
-              <Button sx={sxStyle} onClick={() => setPage(Page.CONTACT)}>
-                <Typography fontFamily={"Courier New"} variant="h6">
-                  CONTACT
-                </Typography>
-              </Button>
-            </div> */}
             <div className="appbar-content">
               <a href="https://github.com/antonsvaren" target="_blank">
                 <Button sx={sxStyle}>

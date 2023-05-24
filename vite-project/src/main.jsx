@@ -14,7 +14,7 @@ function Main() {
       <div >
       
         <div style={{ display: "grid : auto-flow", height: "100%" }}  >
-          <div>
+          <div style={{marginBottom : "50px"}}>
             <Topbar setPage={setPage} />
           </div>
           <div >
@@ -25,6 +25,7 @@ function Main() {
                 // border: "solid green 2px",
                 marginBottom: "5vh",
                 paddingLeft: "100px",
+                marginTop : "5%"
                 // paddingRight: "100px",
                 // position: "absolute",
                 // left: "0",

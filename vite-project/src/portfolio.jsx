@@ -8,13 +8,11 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 export default function Portfolio() {
   const [content, setContent] = useState(Content.LOGIUM);
   const [text, setText] = useState("");
-  const prewrittenText = `lloo again! This is my portfolio. Here you can find some of my projects..`;
+  const prewrittenText = `Hello again! This is my portfolio. Here you can find some of my projects. `;
   var storedPortfolio = sessionStorage.getItem("storedPortfolio");
-
   useEffect(() => {
-    let currentIndex = 1;
-    setText("He" + prewrittenText[1]);
-
+    let currentIndex = 2;
+    setText("H" + prewrittenText[1]+ "l");
     const typingInterval = setInterval(() => {
       if (currentIndex >= prewrittenText.length) {
         clearInterval(typingInterval);
@@ -23,7 +21,6 @@ export default function Portfolio() {
         currentIndex++;
       }
     }, 50);
-
     return () => clearInterval(typingInterval);
   }, []);
   if (storedPortfolio !== prewrittenText) {
