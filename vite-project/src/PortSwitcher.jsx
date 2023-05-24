@@ -14,5 +14,5 @@ export default function PortSwitcher({ content }) {
     default:
       <Logium />;
   }
-  return <div>{res}</div>;
+  return res;
 }

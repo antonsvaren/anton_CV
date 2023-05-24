@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import Content from "./portfolio_content";
 import { useEffect, useState } from "react";
-import PortSwitcher from "./portSwitcher";
+import PortSwitcher from "./PortSwitcher";
 import IconButton from "@mui/material/IconButton";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
@@ -31,7 +31,7 @@ export default function Portfolio() {
   }
   return (
     <div
-      style={{ display: "grid", margin: "auto", width: "50%", padding: "10px" }}
+      style={{ display: "grid", margin: "auto", width: "100%" }}
     >
       <Typography
         variant="h4"
@@ -46,7 +46,7 @@ export default function Portfolio() {
       >
         {storedPortfolio}
       </Typography>
-      <div style={{ display: "flex" }}>
+      <div style={{display:"flex", margin : "auto"}}>
         <IconButton
           style={{ color: "white" }}
           onClick={() =>

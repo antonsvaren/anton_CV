@@ -36,7 +36,7 @@ function Main() {
             </Typography>
           </div>
 
-          <div style={{ width: "50vw", height: "70vh" }}>
+          <div style={{ width: "99vw", height: "70vh" }}>
             <Pagecontent page={page} />
           </div>
         </div>
