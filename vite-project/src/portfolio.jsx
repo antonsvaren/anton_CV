@@ -29,6 +29,13 @@ export default function Portfolio() {
   if (storedPortfolio !== prewrittenText) {
     sessionStorage.setItem("storedPortfolio", text);
   }
+
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
   return (
     <div
       style={{ display: "grid", margin: "auto", width: "100%" }}
@@ -46,20 +53,21 @@ export default function Portfolio() {
       >
         {storedPortfolio}
       </Typography>
-      <div style={{display:"flex", margin : "auto"}}>
+      <div style={{display:"flex", margin : "auto", maxWidth : "100%"}}>
         <IconButton
-          style={{ color: "white" }}
+          style={{ color: "white" , height : "40px", marginTop : "25%"}}
           onClick={() =>
-            setContent(content === 0 ? Content.UWEATHER : Content.LOGIUM)
+            {setContent(content === 0 ? Content.UWEATHER : Content.LOGIUM), scrollToBottom()}
+            
           }
         >
           <ArrowBackIosIcon />
         </IconButton>
         <PortSwitcher content={content} />
         <IconButton
-          style={{ color: "white" }}
+          style={{ color: "white" , height : "40px", marginTop : "25%"}}
           onClick={() =>
-            setContent(content === 0 ? Content.UWEATHER : Content.LOGIUM)
+            {setContent(content === 0 ? Content.UWEATHER : Content.LOGIUM), scrollToBottom()}
           }
         >
           <ArrowForwardIosIcon />

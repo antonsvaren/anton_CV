@@ -11,8 +11,8 @@ export default function Home() {
 My name is Anton, I am a Computer Science student and
 I am attending my last semester  at Gothenburg University.
 
-As of right now, I am finishing my bachelor thesis.
-We are developing a natural deduction editor for
+As of right now, I have just finished my bachelor thesis.
+We developed a natural deduction editor for
 predicate- and propositional logic. I have thoroughly
 enjoyed working on this project and have gained
 valuable skills and knowledge from it.
@@ -21,13 +21,16 @@ I would describe myself as a
 logical and curious person that loves to find
 new and innovative solutions to problems.
 
+I find backend devlopment most challenging and
+fun to work with and wish to furthur develop
+my skills in that area.
+
 Some of my many hobbies are brewing beer,
 cook food and build computers.
 
 I hope you can find this site interesting,
 and if anything, you can find my contact info on
 my <a href="https://www.linkedin.com/in/anton-svar%C3%A9n-76827b142/" target="_blank">LinkedIn</a>.
-
 
 Best regards, Anton `
   var storedHome = sessionStorage.getItem("storedHome");
@@ -77,17 +80,30 @@ Best regards, Anton `
       );
     };
   }, []);
-  return <div style={{display : "flex"}}>
-    <div style={{whiteSpace : "pre-wrap", paddingLeft : "20px", color : "#f9f9f9", position : "absolute"}} dangerouslySetInnerHTML={{ __html: storedHome }}></div>
+
+  useEffect(() => {
+    let windowSize = (window.innerWidth / window.screen.width);
+    let home = document.getElementById("home-content");
+    
+    if(windowSize < 0.25){
+      home.style.display = "inline-block";
+    }
+    else home.style.display = "flex";
+    console.log(home.style.display);
+   
+  },[window.innerWidth])
+  return <div style = {{display : "flex"}} id = "home-content">
+    <div style={{whiteSpace : "pre-wrap", paddingLeft : "20px", color : "#f9f9f9", backgroundColor : "#1e1e1e"}} dangerouslySetInnerHTML={{ __html: storedHome }}></div>
     <canvas
         ref={canvasRef}
         style={{
-          scale: "1",
-          position: "absolute",
-          right: "0",
-          paddingBottom: "100px",
-          paddingLeft: "100px",
-          paddingRight: "150px",
+          // maxWidth : "50%",
+          // maxHeight : "50%",
+          // minHeight : "15%",
+          // minWidth : "25%"
+          width : "35%",
+          height : "35%",
+          paddingLeft : "15%"
         }}
       />
   </div> 
