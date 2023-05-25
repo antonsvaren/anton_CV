@@ -33,6 +33,40 @@ export default function Portfolio() {
       behavior: "smooth",
     });
   };
+
+  function handleContent(content, direction){
+    
+    switch(direction){
+      case 0:
+        switch(content){
+          case 0: 
+            content = Content.GAME;
+            break;
+          case 1: 
+            content = Content.LOGIUM;
+            break;
+          case 2:
+            content = Content.UWEATHER;
+            break;
+        }
+        break;
+      case 1:
+        switch(content){
+          case 0:
+            content = Content.UWEATHER;
+            break;
+          case 1: 
+            content = Content.GAME;
+            break;
+          case 2: 
+            content = Content.LOGIUM;
+            break;
+        }
+        break;
+
+    }
+    return content;
+  }
   return (
     <div
       style={{ display: "grid", margin: "auto", width: "100%" }}
@@ -50,11 +84,11 @@ export default function Portfolio() {
       >
         {storedPortfolio}
       </Typography>
-      <div style={{display:"flex", margin : "auto", maxWidth : "100%"}}>
+      <div style={{display:"flex", margin : "auto", maxWidth : "100%", marginBottom : "2%"}}>
         <IconButton
           style={{ color: "white" , height : "40px", marginTop : "25%"}}
           onClick={() =>
-            {setContent(content === 0 ? Content.UWEATHER : Content.LOGIUM), scrollToBottom()}
+            {setContent(handleContent(content, 0)), setTimeout(scrollToBottom, 1000)}
             
           }
         >
@@ -64,7 +98,7 @@ export default function Portfolio() {
         <IconButton
           style={{ color: "white" , height : "40px", marginTop : "25%"}}
           onClick={() =>
-            {setContent(content === 0 ? Content.UWEATHER : Content.LOGIUM), scrollToBottom()}
+            {setContent(handleContent(content, 1)), setTimeout(scrollToBottom, 100)}
           }
         >
           <ArrowForwardIosIcon />
